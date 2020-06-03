@@ -1,1 +1,1 @@
-# coding-projects-ud
+# MyReads: A Book Lending App
