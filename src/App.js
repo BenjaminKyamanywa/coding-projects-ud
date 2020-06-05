@@ -1,7 +1,6 @@
 import React from 'react'
-// import * as BooksAPI from './BooksAPI'
+import { Switch, Route } from 'react-router-dom'
 import './App.css'
-import Title from './components/Title'
 
 class BooksApp extends React.Component {
   state = {
@@ -11,7 +10,11 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-          <Title />
+       <Switch>
+      	  <Route exact path="/" component={Guide} />
+      	  <Route path="/search" component={Search} />
+      	  <Route component={ErrorPage404} />
+      	</Switch>
       </div>
     )
   }
