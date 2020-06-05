@@ -13,7 +13,6 @@ class BooksApp extends React.Component {
        <Switch>
       	  <Route exact path="/" component={Guide} />
       	  <Route path="/search" component={Search} />
-      	  <Route component={ErrorPage404} />
       	</Switch>
       </div>
     )
