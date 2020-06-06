@@ -1,6 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
+import Guide from './components/Guide'
+import Search from './components/Search'
 
 class BooksApp extends React.Component {
   state = {
