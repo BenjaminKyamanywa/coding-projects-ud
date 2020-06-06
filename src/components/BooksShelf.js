@@ -47,7 +47,7 @@ class BooksShelf extends Component {
         ]
 
 	return(
-    	<div className=""list-books-content>
+    	<div className="list-books-content">
       		<ul>
       			{shelfRows && shelfRows.map((shelf, index) => (
         <BooksShelfRow
