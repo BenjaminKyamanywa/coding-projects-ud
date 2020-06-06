@@ -5,7 +5,7 @@ const AddBook = () => {
 	return (
     	<div className="open-search">
       		<Link to="/search">
-      			Search by title or author
+      			Search
       		</Link>
       	</div>
     )
