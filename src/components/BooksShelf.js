@@ -49,13 +49,13 @@ class BooksShelf extends Component {
 	return(
     	<div className="list-books-content">
       		<ul>
-      			{shelfRows && shelfRows.map((shelf, index) => (
+        {shelfRows && shelfRows.map((shelf, index) => (
         <BooksShelfRow
-          key={index}
-          title={shelf.name}
-          books={shelf.books}
-          onShelfUpdate={this.onShelfUpdate}/>
-		))}
+        key={index}
+  title={shelf.name}
+  books={shelf.books}
+  onShelfUpdate={this.onShelfUpdate}/>
+  ))}
       		</ul>
       	</div>
         )
