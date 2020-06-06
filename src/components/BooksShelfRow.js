@@ -5,7 +5,7 @@ import Book from './Book'
 class BooksShelfRow extends Component {
 	render(){
       
-      	const {title, books, onShelfUpdate }  this.props
+      	const {title, books, onShelfUpdate } = this.props
       
     	return(
         	<div className="bookshelf">

@@ -22,7 +22,7 @@ class BooksShelf extends Component {
         updateBook.shelf = shelfName
       	
       	this.setState({
-        	allBooks: [..allBooks.slice(0, updateIndex), updateBook, ...allBooks.slice(updateIndex + 1)]
+        	allBooks: [...allBooks.slice(0, updateIndex), updateBook, ...allBooks.slice(updateIndex + 1)]
         })
 
 		BooksAPI.update(book, shelfName)
@@ -50,12 +50,12 @@ class BooksShelf extends Component {
     	<div className=""list-books-content>
       		<ul>
       			{shelfRows && shelfRows.map((shelf, index) => (
-        <ShelfRow
-        key={index}
-  title={shelf.name}
-  books={shelf.books}
-  onShelfUpdate={this.onShelfUpdate}/>
-  ))}
+        <BooksShelfRow
+          key={index}
+          title={shelf.name}
+          books={shelf.books}
+          onShelfUpdate={this.onShelfUpdate}/>
+		))}
       		</ul>
       	</div>
         )
