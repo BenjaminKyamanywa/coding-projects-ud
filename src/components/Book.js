@@ -1,24 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-class Book extends Component {
-	render(){
-      
-    	const {book, onShelfUpdate } = this.props
-        const noCoverImage = ''
-        
-    	return(
-        	<li>
+const Book = (props) => {
+
+	const noCoverImage = ''
+
+	return(
+		<li>
           		<div className="book">
           			<div className="book-top">
         				<div 
           					className="book-cover" 
           					style={{ width: 128, 
           							 height: 193, 
-          							 backgroundImage: `url(${book.imageLinks ? book.imageLinks.thumbnail : noCoverImage})` }}>
+          							 backgroundImage: `url(${props.book.imageLinks ? props.book.imageLinks.thumbnail : noCoverImage})` }}>
 						</div>
 					<div className="book-shelf-changer">
-                        <select value={book.shelf} onChange={e => onShelfUpdate(book, e.target.value)}>
+                        <select value={props.book.shelf} onChange={e => props.onShelfUpdate(props.book, e.target.value)}>
                           <option value="move" disabled>Move to...</option>
                           <option value="currentlyReading">Currently Reading</option>
                           <option value="wantToRead">Want to Read</option>
@@ -27,12 +25,11 @@ class Book extends Component {
                         </select>
                       </div>
                     </div>
-          			<div className="book-title">{book.title ? book.title : ''}</div>
-        			<div className="book-authors">{book.authors ? book.authors.join(', ') : ''}</div>
+          			<div className="book-title">{props.book.title ? props.book.title : ''}</div>
+        			<div className="book-authors">{props.book.authors ? props.book.authors.join(', ') : ''}</div>
           		</div>
           	</li>
-        )
-    }
+	)
 }
 
 Book.propTypes = {
