@@ -5,7 +5,7 @@ class Book extends Component {
 	render(){
       
     	const {book, onShelfUpdate } = this.props
-        const noCoverImage = '../img/no_cover_thumb.gif'
+        const noCoverImage = ''
         
     	return(
         	<li>
@@ -35,7 +35,7 @@ class Book extends Component {
     }
 }
 
-Book.PropTypes = {
+Book.propTypes = {
 	book: PropTypes.object.isRequired,
   	onShelfUpdate: PropTypes.func
 }
