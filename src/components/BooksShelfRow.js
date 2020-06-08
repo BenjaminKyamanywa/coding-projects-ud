@@ -28,8 +28,8 @@ class BooksShelfRow extends Component {
     }
 }
 
-BooksShelfRow.PropTypes = {
-	title: PropTypes.string.isRequired,
+BooksShelfRow.propTypes = {
+	  title: PropTypes.string.isRequired,
   	books: PropTypes.array,
   	onShelfUPdate: PropTypes.func
 }
